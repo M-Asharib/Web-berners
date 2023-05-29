@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Transformations Website</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            perspective: 1000px;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            perspective: 1000px;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #FF0066;
+            transform-style: preserve-3d;
+            transform: rotateX(45deg) rotateY(45deg);
+            animation: rotate 5s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotateX(45deg) rotateY(45deg);
+            }
+
+            100% {
+                transform: rotateX(45deg) rotateY(405deg);
+            }
+        }
+
+        .box__face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 2px solid #000;
+        }
+
+        .box__face-front {
+            transform: translateZ(100px);
+        }
+
+        .box__face-back {
+            transform: rotateY(180deg) translateZ(100px);
+        }
+
+        .box__face-left {
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+
+        .box__face-right {
+            transform: rotateY(90deg) translateZ(100px);
+        }
+
+        .box__face-top {
+            transform: rotateX(90deg) translateZ(100px);
+        }
+
+        .box__face-bottom {
+            transform: rotateX(-90deg) translateZ(100px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="box__face box__face-front"></div>
+            <div class="box__face box__face-back"></div>
+            <div class="box__face box__face-left"></div>
+            <div class="box__face box__face-right"></div>
+            <div class="box__face box__face-top"></div>
+            <div class="box__face box__face-bottom"></div>
+        </div>
+    </div>
+</body>
+
+</html>

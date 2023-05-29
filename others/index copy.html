@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="/Bootstrap/bootstrap.min.css">
+    <script src="/Bootstrap/bootstrap.bundle.min.js"></script>
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Web Berners</title>
+    <style>
+        #hello {
+            transition: 0.3s;
+        }
+
+        #hello.expand {
+            /* width: 100vw; */
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0px 0px 10px 1px black;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+        integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.js"
+        integrity="sha512-6DC1eE3AWg1bgitkoaRM1lhY98PxbMIbhgYCGV107aZlyzzvaWCW1nJW2vDuYQm06hXrW0As6OGKcIaAVWnHJw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+
+<body class="container-fluid p-0">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Get the div element
+            var myDiv = document.getElementById("hello");
+
+            // Add an event listener for when the user scrolls
+            window.addEventListener("scroll", function () {
+                // Check if the user has scrolled past a certain point (e.g. 100 pixels)
+                // if (window.scrollY > 50 && window.scrollY < 650) {
+                if (window.scrollY > 50) {
+                    // Add the "expand" class to the div element
+                    myDiv.classList.add("expand");
+                }
+                // else if (window.scrollY > 650 && window.scrollY < 750) {
+                //     myDiv.classList.remove("expand");
+                // }
+                // else if (window.scrollY > 750 && window.scrollY < 1750) {
+                //     myDiv.classList.add("expand");
+                // }
+
+                else {
+                    // Remove the "expand" class from the div element
+                    myDiv.classList.remove("expand");
+                }
+            });
+        });
+
+
+    </script>
+    <header id="hello" class="container-fluid">
+        <div class="container">
+            <nav class="navbar-expand-lg d-flex navbar-dark text-light">
+                <div class="w-100 d-lg-flex justify-content-center align-items-center my h-100 -auto">
+                    <span class="logo_ ">
+                        <a href="/index.html">
+                            <img width="" height="70vh" class=" img-luid " src="/img/web_berner - logo-white.png"
+                                alt="">
+                        </a>
+                    </span>
+                    <button class="navbar-toggler float-end mt-2 me-2" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent">
+                        <span style="color: #FF0066;" class="navbar-toggler-ico"> <i
+                                class="fa fa-bars text- p-2 fa-2x bg-dark"></i></span>
+                    </button>
+                    <div class="collapse navbar-collapse me-5" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+                            <li class="nav-item text-center active_link border-none">
+                                <a class="nav-link px-4 text-dark" href="/index.html">HOME</a>
+                            </li>
+                            <li class="nav-item text-center nav_link_ ">
+                                <a class="nav-link text-center px-4" href="/services.html">SERVICES</a>
+                            </li>
+                            <li class="nav-item text-center nav_link_ ">
+                                <a class="nav-link text-center px-4" href="/OurWork.html">OUR WORK</a>
+                            </li>
+                            <li class="nav-item text-center nav_link_ ">
+                                <a class="nav-link text-center px-4" href="/Contact.html">CONTACT US</a>
+                            </li>
+                            <li class="nav-item text-center nav_link_ ">
+                                <a class="nav-link text-center px-4" href="/WorkWithUs.html">WORK WITH US</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+
+            </nav>
+        </div>
+    </header>
+
+    <!-- main section -->
+    <section class="container-fluid mt-5 pt-5   after_header_1">
+        <div class="row mt-5">
+            <div class="col-lg-6 left py-5 ps-5">
+                <div class="h pt-3 text-center">
+                    <div class="pt-5 mt-5">
+                        <div class="pt-5 mt-5">
+                            <div class="pt-5 mt-5">
+                                <h3 class="mt-5">DEVELOPER</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container d-flex ms-5 ps-5 justify-content-cnter">
+                    <div class="">
+                        <h1>WEB</h1>
+                        <h1>APP</h1>
+                        <h1>SOFTWARE</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 right py-5 my-auto">
+
+                <div class="container px-5 ">
+                    <h1>UX/UI</h1>
+                    <h1>GRAPHIC </h1>
+                    <h2>DESIGNER</h2>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="row container px-5 mt-5">
+            <div class="col-3 px-4"><img class="img-fluid mx-5 px-5 my-5" src="/img/1.png" alt="html"></div>
+            <div class="col-3 px-4"><img class="img-fluid mx-5 px-5 my-" src="/img/2.png" alt="css"></div>
+            <div class="col-3 px-4"><img class="img-fluid mx-5 px-5 my-5" src="/img/3.png" alt="css"></div>
+            <div class="col-3 px-4"><img class="img-fluid mx-5 px-5 my-5" src="/img/4.png" alt="css"></div>
+        </div> -->
+    </section>
+
+    <!-- technology section -->
+    <section class="container mt-5 pt-5       after_header_2">
+        <h1 class="pink mt-5 pt-5">technology</h1>
+        <h1>that we use</h1>
+        <div class="row">
+            <div class="col-12">
+                <div class="row mt-5 pt-5">
+                    <div class="col-6">
+                        <img class="col-lg-1 img-fluid mx-5" src="/img/canva/thumbnail/htmllogo.png" alt="html">
+                        <img class="col-lg-1 img-fluid mx-5" src="/img/canva/thumbnail/csslogo.png" alt="css">
+                        <img class="col-lg-1 img-fluid mx-5" src="/img/canva/thumbnail/bootstraplogo.png"
+                            alt="bootstrap">
+                        <img class="col-lg-1 img-fluid mx-5" src="/img/canva/thumbnail/jslogo.png" alt="javascript">
+                    </div>
+                    <div class="col-6">
+                        <img class="col-lg-1 img-fluid mx-5" src="/img/canva/thumbnail/jquerylogo.png" alt="jquery">
+                        <img class="col-lg-1 img-fluid mx-5" src="/img/canva/thumbnail/mysqllogo.png" alt="mysql">
+                        <img class="col-lg-1 img-fluid mx-5" src="/img/canva/thumbnail/phplogo.png" alt="php">
+                        <img class="col-lg-1 img-fluid mx-5" src="/img/canva/thumbnail/laravellogo.png" alt="laravel">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- business grow section -->
+    <section class="container mt-5 pt-5    px-5   after_header_3">
+        <div class="row mt-5">
+            <div class="col-lg-8">
+                <h1><span style="color: #F7DF1E;"> grow </span>your <span style="color: #FF0066;">business</span> <br>
+                    with us</h1>
+                <h3 style="font-family: 'Magra', sans-serif; font-weight: 00;">WEB berners</h3>
+            </div>
+            <div class="col-lg-4 pt-5 mt-5">
+                <img class="img-fluid " src="/img/p/Graph-PNG-Background.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- portfolio -->
+    <!-- portfolio # 1 -->
+    <section class="container-fluid mt-5 pt-5 after_header_4">
+        <div class="row mt-5">
+            <div class="col-lg-7 mx-auto portfolio_1">
+                <div class="container mx-4 my-auto pt-5 my-auto">
+                    <p class="mt-5 mb-5">portfolio</p>
+                    <h1>Al Basit Enterprises</h1>
+                    <div class="row mt-lg-5">
+                        <div class="col-lg-6">
+                            <p class="">Designed & develop</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <a class="px-5 py-2 d-inline-block" href="">See more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 p-0">
+                <img class="img-fluid" src="/img/portfolio/w1 (2).png" alt="">
+                <img class="img-fluid" src="/img/portfolio/w1 (3).png" alt="">
+                <img class="img-fluid" src="/img/portfolio/w1 (5).png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- portfolio # 2 -->
+    <section class="container-fluid after_header_4">
+        <div class="row">
+            <div class="col-lg-5 p-0">
+                <img class="img-fluid" src="/img/portfolio/w2 (3).png" alt="">
+                <img class="img-fluid" src="/img/portfolio/w2 (4).png" alt="">
+                <img class="img-fluid" src="/img/portfolio/w2 (5).png" alt="">
+            </div>
+            <div class="col-lg-7  mx-auto portfolio_2">
+                <div class="container px-5 my-auto pt-5 my-auto">
+                    <p class="mt-5 pt-5 mb-5">portfolio</p>
+                    <h1 class="mt-5 pt-5">Theater</h1>
+                    <div class="row mt-lg-5">
+                        <div class="col-lg-6">
+                            <p class="">Designed & develop</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <a class="px-5 py-2 d-inline-block" href="">See more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- plans section -->
+    <style>
+        .plans_card {
+            background: black;
+        }
+
+        .plans_card h4 {
+            background: #F7DF1E;
+        }
+
+        .plans_card ul li {
+            color: white;
+        }
+    </style>
+    <section class="container my-5 pt-5    px-5   after_header_5">
+        <h1 class="text-center"><span style="color: #FF0066;">P</span>lans</h1>
+        <div class="row my-5">
+            <div class="col-lg-4   p-0">
+                <div class="plans_card mx-5">
+                    <h4 class="py-2 text-center">ALPHA</h4>
+                    <ul class="mx-5 pt-3 pb-4">
+                        <li>Single page website</li>
+                        <li>Google Business Profile</li>
+                        <li>Logo design</li>
+                        <li>color Theme</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4   p-0">
+                <div class="plans_card mx-5">
+                    <h4 style="background-color: #FF0066; color: white;" class="py-2 text-center">ALPHA</h4>
+                    <ul class="mx-5 pt-3 pb-4">
+                        <li>Single page website</li>
+                        <li>Google Business Profile</li>
+                        <li>Logo design</li>
+                        <li>color Theme</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4   p-0">
+                <div class="plans_card mx-5">
+                    <h4 class="py-2 text-center">ALPHA</h4>
+                    <ul class="mx-5 pt-3 pb-4">
+                        <li>Single page website</li>
+                        <li>Google Business Profile</li>
+                        <li>Logo design</li>
+                        <li>color Theme</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <footer class="container-fluid py-5 mt-5">
+        <div class="container">
+            <div class="row     footer_nav">
+                <div class="col-12">
+                    <ul>
+                        <li><a class="px-5 active" href="/index.html">HOME</a></li>
+                        <li><a class="px-5 " href="/services.html">SERVICES</a></li>
+                        <li><a class="px-5 " href="/ourwork.html">OUR WORK</a></li>
+                        <li><a class="px-5 " href="/workwithus.html">WORK WITH US</a></li>
+                        <li><a class="px-5 " href="/contact.html">CONTACT</a></li>
+                    </ul>
+                </div>
+                <div class="row">
+
+                    <div class="col-lg-7 ms-lg-5 ps-lg-5 mt-5">
+                        <div class="ms-lg-5">
+
+                            <h4 class="footer_heading">Contact us</h4>
+                            <div class="foot_contact_info px-lg-3">
+                                <style>
+                                    .email a:hover {
+                                        color: rgb(0, 255, 0);
+                                    }
+                                </style>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td><i class="fa fa-envelope"></i></td>
+                                            <td class="ps-2 email"><a class=""
+                                                    href="mailto: info@webberners.com">info@webberners.com</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fa fa-mobile"></i></td>
+                                            <td class="ps-2"><a class="" href="Phone: +92 321 299 1583">+92 321 299
+                                                    1583</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fa fa-location mb-5"></i></td>
+                                            <td class="ps-2"><a class="">A-695, Street # 19, Lucknow society,
+                                                    <br>
+                                                    Landi road, Karachi, Sindh, <br>
+                                                    Paksitan, Asia</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="col-3 mt-3 ">
+                        <h4 class="footer_heading">Join us on social media</h4>
+                        <ul class="bg-light p-4">
+                            <li><a href=""><img class="img-fluid pe-2" src="/img/facebook.png" alt=""></a></li>
+                            <li><a href=""><img class="img-fluid px-2" src="/img/instagram.png" alt=""></a></li>
+                            <li><a href=""><img class="img-fluid px-2" src="/img/linkedin.png" alt=""></a></li>
+                            <li><a href=""><img class="img-fluid px-2" src="/img/twitter.png" alt=""></a></li>
+                            <li><a href=""><img class="img-fluid px-2" src="/img/pinterest.png" alt=""></a></li>
+                        </ul>
+                    </div> -->
+                    <!-- <div class="col-8 mt-3">
+                        <h4 class="footer_heading"></h4>
+                    </div> -->
+                    <div class="col-3 mt-3 ms-5 mt-5">
+                        <div class="d-flex">
+
+                            <i class="fa-solid fa-clock fa-3x text-warning"></i>
+                            <h4 class="footer_heading mt-2 ms-3 ">Working Hours</h4>
+                        </div>
+                        <div class="foot_contact_info ps-lg-2 mt-lg-4">
+
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>Monday - Thursday: </td>
+                                        <td class="ps-2"><a class="">9:00 AM - 7:00 PM</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Friday - Saturday: </td>
+                                        <td class="ps-2"><a class="">9:00 AM - 3:00 PM</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

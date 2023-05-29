@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parallax Scrolling Website</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+      height: 2000px; /* To simulate scrolling */
+    }
+    
+    .section {
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+    
+    .section h1 {
+      font-size: 3rem;
+      text-transform: uppercase;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    
+    .parallax-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    
+    .parallax-bg.bg1 {
+      background-image: url('image1.jpg');
+    }
+    
+    .parallax-bg.bg2 {
+      background-image: url('image2.jpg');
+    }
+    
+    .parallax-bg.bg3 {
+      background-image: url('image3.jpg');
+    }
+  </style>
+</head>
+<body>
+  <div class="section">
+    <div class="parallax-bg bg1"></div>
+    <h1>Section 1</h1>
+  </div>
+  <div class="section">
+    <div class="parallax-bg bg2"></div>
+    <h1>Section 2</h1>
+  </div>
+  <div class="section">
+    <div class="parallax-bg bg3"></div>
+    <h1>Section 3</h1>
+  </div>
+</body>
+</html>

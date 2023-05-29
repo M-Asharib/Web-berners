@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="Bootstrap/bootstrap.min.css">
+    <script src="Bootstrap/bootstrap.bundle.min.js"></script>
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>Web Berners</title>
+    <style>
+        #hello {
+            transition: 0.3s;
+        }
+
+        #hello.expand {
+            /* width: 100vw; */
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0px 0px 10px 1px black;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+        integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.js"
+        integrity="sha512-6DC1eE3AWg1bgitkoaRM1lhY98PxbMIbhgYCGV107aZlyzzvaWCW1nJW2vDuYQm06hXrW0As6OGKcIaAVWnHJw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+
+<body class="container-fluid p-0">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Get the div element
+            var myDiv = document.getElementById("hello");
+
+            // Add an event listener for when the user scrolls
+            window.addEventListener("scroll", function () {
+                // Check if the user has scrolled past a certain point (e.g. 100 pixels)
+                // if (window.scrollY > 50 && window.scrollY < 650) {
+                if (window.scrollY > 50) {
+                    // Add the "expand" class to the div element
+                    myDiv.classList.add("expand");
+                }
+                else {
+                    // Remove the "expand" class from the div element
+                    myDiv.classList.remove("expand");
+                }
+            });
+        });
+
+
+    </script>
+    <header id="hello" class="container-fluid bg-black">
+        <div class="container">
+            <nav class="navbar-expand-lg d-flex navbar-dark text-light">
+                <div class="w-100 d-lg-flex justify-content-center align-items-center my h-100 -auto">
+                    <span class="logo_">
+                        <a href="/index.html">
+                            <img width="" height="62vh" class="py-1 my-1" src="img/rehanLogo/WHITE TEXT PINK LOGO.png"
+                                alt="">
+                        </a>
+                    </span>
+                    <button class="navbar-toggler float-end mt-2 me-2" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                        <span style="color: #FF0066;" class="navbar-toggler-ico">
+                            <i class="fa fa-bars text- p-2 fa-2x"></i>
+                        </span>
+                    </button>
+                    <div class="collapse navbar-collapse me-5" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+                            <li class="nav-item text-center  nav_link_">
+                                <a class="nav-link text-center px-4" href="index.html">
+                                    HOME
+                                </a>
+                            </li>
+                            <li class="nav-item text-center  nav_link_">
+                                <a class="nav-link text-center px-4" href="#services">
+                                    SERVICES
+                                </a>
+                            </li>
+                            <li class="nav-item text-center nav_link_">
+                                <a class="nav-link text-center px-4" href="#ourwork">OUR WORK</a>
+                            </li>
+                            <li class="nav-item text-center active_link ">
+                                <a class="nav-link text-center text-white px-4" href="/Contact.html">CONTACT</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- offcanvas -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var offcanvasElement = document.getElementById('offcanvasScrolling');
+                var offcanvas = new bootstrap.Offcanvas(offcanvasElement);
+
+                var offcanvasButton = document.querySelector('[data-bs-toggle="offcanvas"][data-bs-target="#offcanvasScrolling"]');
+
+                offcanvasButton.addEventListener('click', function (event) {
+                    event.stopPropagation(); // Stop the event from propagating further
+
+                    if (!offcanvasElement.classList.contains('show')) {
+                        offcanvas.show();
+                    }
+                });
+
+                document.addEventListener('click', function (event) {
+                    var targetElement = event.target;
+                    if (targetElement !== offcanvasElement && !offcanvasElement.contains(targetElement)) {
+                        offcanvas.hide();
+                    }
+                });
+            });
+        </script>
+
+
+        <div style="background-color: #FF0066;" class="offcanvas offcanvas-start bg-" data-bs-scroll="true"
+            data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+            <div class="offcanvas-header bg-black">
+                <img class="img-fluid w-50" src="img/rehanLogo/WHITE TEXT PINK LOGO.png" alt="">
+                <button type="button" class="btn text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
+                    <i class="fa fa-close text-light"></i>
+                </button>
+            </div>
+            <div class="offcanvas-body m-0 p-0">
+                <ul class="navbar-nav p-0 m-0">
+                    <li class="nav-item  active_link_active_sm border-none">
+                        <a class="nav-link px-4" href="/index.html">HOME</a>
+                    </li>
+                    <li class="nav-item nav_link_sm">
+                        <a class="nav-link px-4" href="#services">
+                            <span class="nav_link_span"></span> SERVICES
+                        </a>
+                    </li>
+                    <li class="nav-item  nav_link_sm">
+                        <a class="nav-link px-4" href="#ourwork">OUR WORK</a>
+                    </li>
+                    <li class="nav-item  nav_link_sm">
+                        <a class="nav-link px-4" href="/Contact.html">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="offcanvas-header bg-black px-5">
+                <div class="mx-auto d-fle ">
+                    <p style="color: #ffffffb0;" class="text- mt-2 p-0 m-0 ms-2">follow us on:</p>
+                    <i class="fa-brands fa-facebook-square fa-2x text-light px-2 " aria-hidden="true"></i>
+                    <i class="fa-brands fa-instagram-square fa-2x text-light px-2" aria-hidden="true"></i>
+                    <i class="fa-brands fa-pinterest-square fa-2x text-light px-2" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+    <style>
+        .bold {
+            font-weight: bolder;
+        }
+
+        .social_media_icon_contact {
+            font-size: 1.7rem;
+        }
+
+        .social_media_icon_contact i:hover {
+            background: #ff0066;
+            color: white;
+            cursor: pointer;
+        }
+
+        .bg_img {
+            height: 32vh;
+            /* height: 42vh; */
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            /* background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("/img/contact/contact-us-scaled-1.jpg");
+            background-position: 0vh -25vh;
+            background-attachment: fixed; */
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 0px -150px;
+            background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("/img/contact/contactus_banner.png");
+
+
+
+            /* background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/img/contact_bg.jpg"); */
+        }
+
+        .bg_img_text {
+            font-size: 5rem;
+            text-align: center;
+            color: rgb(0, 0, 0);
+            margin-right: 700px;
+            font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.685);
+        }
+    </style>
+    <!-- main section - responsive 50% -->
+
+    <section class="container-fluid p-0 mt-lg-5 pt-4   ">
+        <div class="bg_img py-5">
+            <h1 class="bg_img_text py-">Contact us</h1>
+        </div>
+        <div class="container ">
+            <div class="row">
+                <div class="col-lg-6 py-4">
+                    <h1>GET IN TOUCH</h1>
+                    <p class="bold pink">ADDRESS</p>
+
+                    <p><i class="fa fa-location"></i> A-695, street no. 9, lucknow society,
+                        landhi road, Karachi, Paksitan</p>
+                    <p class="bold mt-4 pink">CONTACT DETAILS
+                    </p>
+                    <p><i class="fas fa-mobile-alt"></i> +92 321 299 1583</p>
+                    <p><i class="fa fa-envelope"></i> info@webberners.com</p>
+                    <p class="bold pink">FOLLOW US
+                    </p>
+                    <div class="social_media_icon_contact">
+                        <i class="fa-brands fa-facebook-f p-2 border "></i>
+                        <i class="fa-brands fa-instagram p-2 border"></i>
+                        <i class="fa-brands fa-pinterest-p p-2 border"></i>
+                    </div>
+                </div>
+                <div class="col-lg-6 pt-4">
+                    <div style="max-width:100%; overflow:hidden;color:red; width:600px; height:350px;">
+                        <div id="my-map-display" style="height:100%; width:100%;max-width:100%;"> <iframe
+                                style="height:100%;width:100%;border:0;" frameborder="0"
+                                src="https://maps.google.com/maps?q=a695 lucknow society korangi karachi&t=k&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+                        </div><a class="googl-ehtml" rel="nofollow" href="https://www.bootstrapskins.com/themes"
+                            id="enable-map-info">premium bootstrap themes</a>
+                        <style>
+                            #my-map-display img.text-marker {
+                                max-width: none !important;
+                                background: none !important;
+                            }
+
+                            img {
+                                max-width: none
+                            }
+                        </style>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <footer class="container-fluid py-5 mt-5">
+        <div class="container">
+            <div class="row     footer_nav">
+                <div class="col-lg-12">
+                    <ul class="p-0">
+                        <li><a class="px-lg-5 pe-3 active" href="/index.html">HOME</a></li>
+                        <li><a class="px-lg-5 px-3 " href="/index.html#services">SERVICES</a></li>
+                        <li><a class="px-lg-5 px-3 " href="/ourwork.html">OUR WORK</a></li>
+                        <!-- <li><a class="px-lg-5 px-2 " href="/workwithus.html">WORK WITH US</a></li> -->
+                        <li><a class="px-lg-5 px-3 " href="/contact.html">CONTACT</a></li>
+                    </ul>
+                </div>
+                <div class="row">
+
+                    <div class="col-lg-7 col-12 col-md-12 col mt-5">
+                        <div class="ms-lg-5">
+
+                            <h4 class="footer_heading">Contact us</h4>
+                            <div class="foot_contact_info px-3">
+                                <style>
+                                    .email a:hover {
+                                        color: rgb(0, 255, 0);
+                                    }
+                                </style>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td><i class="fa fa-envelope"></i></td>
+                                            <td class="ps-2 email"><a class=""
+                                                    href="mailto: info@webberners.com">info@webberners.com</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fas fa-mobile-alt"></i></td>
+                                            <td class="ps-2"><a class="" href="Phone: +92 321 299 1583">+92 321 299
+                                                    1583</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fa fa-location mb-4"></i></td>
+                                            <td class="ps-2"><a class="">A-695, street no. 9, lucknow society,
+
+                                                    <br>
+                                                    landhi road, Karachi, Paksitan</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-12 col-md-12 col mt-3 ms-lg-5 mt-5">
+                        <div class="d-flex">
+
+                            <i class="fa-solid fa-clock fa-3x text-warning d-none d-lg-block"></i>
+                            <h4 class="footer_heading mt-2 ms-lg-3 ">Working Hours</h4>
+                        </div>
+                        <div class="foot_contact_info ps-3 ps-lg-2 mt-lg-4">
+
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>Monday - Thursday: </td>
+                                        <td class="ps-2"><a class="">9:00 AM - 7:00 PM</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Friday - Saturday: </td>
+                                        <td class="ps-2"><a class="">9:00 AM - 3:00 PM</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

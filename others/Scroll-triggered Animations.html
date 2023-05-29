@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll-triggered Animations Website</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+    }
+    
+    .section {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    
+    .animated {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    
+    .animated.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .section-1 {
+      background-color: #37474f;
+      color: #fff;
+    }
+    
+    .section-2 {
+      background-color: #f50057;
+      color: #fff;
+    }
+    
+    .section-3 {
+      background-color: #c51162;
+      color: #fff;
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="section section-1">
+    <h1 class="animated">Scroll-Triggered Animations</h1>
+    <p class="animated">Section 1 content</p>
+  </div>
+
+  <div class="section section-2">
+    <h1 class="animated">Section 2</h1>
+    <p class="animated">Section 2 content</p>
+  </div>
+
+  <div class="section section-3">
+    <h1 class="animated">Section 3</h1>
+    <p class="animated">Section 3 content</p>
+  </div>
+
+  <script>
+    function animateOnScroll() {
+      const animatedElements = document.querySelectorAll('.animated');
+  
+      animatedElements.forEach((element) => {
+        const elementTop = element.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+  
+        if (elementTop < windowHeight * 0.8) {
+          element.classList.add('show');
+        }
+      });
+    }
+  
+    window.addEventListener('scroll', animateOnScroll);
+    animateOnScroll();
+  </script>
+</body>
+</html>

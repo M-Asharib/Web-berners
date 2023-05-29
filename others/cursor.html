@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <h1 class="circle-cursor">Hover over this text</h1>
+  <div class="cursor-blur"></div>
+
+  <script>
+    var elements = document.querySelectorAll('.circle-cursor');
+    var cursorBlur = document.querySelector('.cursor-blur');
+
+    document.addEventListener('mousemove', function(e) {
+      cursorBlur.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+    });
+
+    elements.forEach(function(element) {
+      element.addEventListener('mouseenter', function() {
+        document.body.classList.add('circle-cursor-active');
+      });
+      element.addEventListener('mouseleave', function() {
+        document.body.classList.remove('circle-cursor-active');
+      });
+    });
+  </script>
+</body>
+</html>
+<style>
+  .circle-cursor {
+  cursor: none;
+}
+
+.circle-cursor-active {
+  cursor: none;
+}
+
+.cursor-blur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(1px);
+  background-color: rgba(0, 0, 0, 0.235);
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+}
+
+</style>
