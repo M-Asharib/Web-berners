@@ -513,6 +513,7 @@ body {
     transform: rotateX(45deg) rotateY(45deg);
     background-image: url();
     background-image: url(img/rehanLogo/B\ LOGO\ PINK\ CLEAR\ BACKGROUND.png);
+    /* background-image: url(/img/fav1.png); */
     background-position: 0px -8px;
     background-repeat: no-repeat;
     background-size: cover;
