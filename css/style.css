@@ -512,7 +512,7 @@ body {
     transform-style: preserve-3d;
     transform: rotateX(45deg) rotateY(45deg);
     background-image: url();
-    background-image: url(https://m-asharib.github.io/Web-berners/img/rehanLogo/WHITE%20TEXT%20PINK%20LOGO.png);
+    background-image: url("https://m-asharib.github.io/Web-berners/img/rehanLogo/WHITE%20TEXT%20PINK%20LOGO.png");
     /* background-image: url(/img/fav1.png); */
     background-position: 0px -8px;
     background-repeat: no-repeat;
