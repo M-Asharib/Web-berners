@@ -581,6 +581,7 @@ body {
     top: 150px;
     left: -100px;
     position: absolute;
+    z-index: -100;
 }
 
 .container3d2 .box {
