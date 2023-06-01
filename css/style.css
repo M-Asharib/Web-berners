@@ -512,15 +512,15 @@ body {
     transform-style: preserve-3d;
     transform: rotateX(45deg) rotateY(45deg);
     background-image: url();
-/*     background-image: url("https://m-asharib.github.io/Web-berners/img/rehanLogo/WHITE%20TEXT%20PINK%20LOGO.png"); */
+    /* background-image: url("img/rehanLogo/B\ LOGO\ PINK\ CLEAR\ BACKGROUND.png"); */
     background-image: url("https://m-asharib.github.io/Web-berners/img/rehanLogo/WHITE%20TEXT%20PINK%20LOGO.png");
-
     /* background-image: url(/img/fav1.png); */
     background-position: 0px -8px;
     background-repeat: no-repeat;
     background-size: cover;
     /* margin: 100px 0px; */
     animation: rotate 7s linear infinite;
+    z-index: -100;
 }
 
 @keyframes rotate {
@@ -903,6 +903,51 @@ body {
 }
 
 /* scroll to top - end */
+
+
+
+/* contact page start */
+.bold {
+    font-weight: bolder;
+}
+
+.social_media_icon_contact {
+    font-size: 1.7rem;
+}
+
+.social_media_icon_contact i:hover {
+    background: #ff0066;
+    color: white;
+    cursor: pointer;
+}
+
+.bg_img {
+    /* height: 32vh; */
+    /* height: 42vh; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("/img/contact/contact-us-scaled-1.jpg");
+    background-position: 0vh -25vh;
+    background-attachment: fixed; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0px -150px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("img/contact/contactus_banner.png");
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/img/contact_bg.jpg"); */
+}
+
+.bg_img_text {
+    font-size: 5rem;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    margin-left: -350px;
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.685);
+}
+/* contact page end */
+
+
 /* responsive start */
 @media only screen and (min-width: 360px) and (max-width: 778px) {
     .hero_h1 {
@@ -956,6 +1001,19 @@ body {
     .footer_nav ul li a {
         font-size: 0.7rem;
     }
+    /* .bg_img {
+      
+        background-position: 0px -1150px;
+    } */
+    .bg_img_text {
+        font-size: 5rem;
+        text-align: center;
+        color: rgb(0, 0, 0);
+        margin-left: 000px;
+        font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.685);
+    }
+   
 }
 
 @media only screen and (min-width: 989px) and (max-width: 1200px) {
