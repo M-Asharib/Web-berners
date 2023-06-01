@@ -1023,8 +1023,9 @@ body {
         justify-content: center;
         align-items: center;
         perspective: 1000px;
-        top: 200px;
-        left: 100px;
+        /* top: 200px; */
+        top: 180px;
+        left: 106;
         position: absolute;
     }
    
@@ -1041,7 +1042,7 @@ body {
         /* background: rebeccapurple; */
     }
     /* 3d */
-    .container3dLogo {
+    /* .container3dLogo {
         width: 100%;
         height: 100%;
         display: flex;
@@ -1051,7 +1052,7 @@ body {
         top: 200px;
         left: 100px;
         position: absolute;
-    }
+    } */
 }
 
 
