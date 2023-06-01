@@ -451,7 +451,7 @@ footer {
 
 .hero_h1 {
     color: black;
-    font-family: fantasy,Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: fantasy, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     /* font-family: cursive; */
 
     font-size: 4.9rem;
@@ -590,7 +590,7 @@ body {
     transform-style: preserve-3d;
     transform: rotateX(45deg) rotateY(45deg);
     background-image: url();
-    animation: rotate2 8s linear infinite ;
+    animation: rotate2 8s linear infinite;
 }
 
 @keyframes rotate2 {
@@ -945,6 +945,7 @@ body {
     font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.685);
 }
+
 /* contact page end */
 
 
@@ -1001,6 +1002,7 @@ body {
     .footer_nav ul li a {
         font-size: 0.7rem;
     }
+
     /* .bg_img {
       
         background-position: 0px -1150px;
@@ -1024,11 +1026,14 @@ body {
         align-items: center;
         perspective: 1000px;
         /* top: 200px; */
+        /* left: 100px; */
         top: 180px;
-        left: 106;
+        /* left: 106px; */
         position: absolute;
+        display: flex;
+        justify-content: end;
     }
-   
+
 }
 
 @media only screen and (min-width: 989px) and (max-width: 1200px) {
@@ -1041,18 +1046,23 @@ body {
         font-size: 4rem;
         /* background: rebeccapurple; */
     }
+
     /* 3d */
-    /* .container3dLogo {
+    .container3dLogo {
         width: 100%;
         height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         perspective: 1000px;
-        top: 200px;
-        left: 100px;
+        /* top: 200px; */
+        /* left: 100px; */
+        top: 180px;
+        left: 106px;
         position: absolute;
-    } */
+        /* display: flex;
+        justify-content: end; */
+    }
 }
 
 
